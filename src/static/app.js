@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to fetch activities from API
   async function fetchActivities() {
     try {
-      const response = await fetch("/activities");
+  const response = await fetch("/activities", { cache: "no-store" });
       const activities = await response.json();
 
       // Clear loading message and previous options
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDiv.textContent = result.message;
         messageDiv.className = "message success";
         // Refresh activities so the list updates
-        fetchActivities();
+        await fetchActivities();
       } else {
         messageDiv.textContent = result.detail || "Failed to remove participant";
         messageDiv.className = "message error";
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDiv.className = "message success";
         signupForm.reset();
         // Refresh activities so participants list updates
-        fetchActivities();
+        await fetchActivities();
       } else {
         messageDiv.textContent = result.detail || "An error occurred";
         messageDiv.className = "message error";
