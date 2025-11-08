@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -141,4 +142,72 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Participants section styling */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #e6e8ee;
+}
+
+.participants-section h5 {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.participants-list {
+  list-style: none; /* hide bullets */
+  margin: 0;
+  padding: 8px 12px;
+  display: block;
+  background: linear-gradient(180deg, #fbfbff, #ffffff);
+  border-radius: 6px;
+  border: 1px solid #f0f2fa;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  color: #444;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background: rgba(13,71,161,0.03);
+  font-size: 0.95rem;
+}
+
+.participants-list li:last-child {
+  margin-bottom: 0;
+}
+
+.participant-email {
+  word-break: break-all;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.delete-btn:hover {
+  background-color: rgba(198,40,40,0.08);
+  color: #b71c1c;
+}
+
+.no-participants {
+  color: #777;
+  font-style: italic;
+  margin: 0;
 }
